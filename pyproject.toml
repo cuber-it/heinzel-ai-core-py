@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "heinzel-ai-core"
+version = "0.1.0"
+description = "Heinzel AI Core -- cognitive agent engine for Python."
+authors = [
+    { name = "Ulrich Cuber" },
+]
+license = "Apache-2.0"
+requires-python = ">=3.11"
+dependencies = [
+    "pyyaml",
+    "requests",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
